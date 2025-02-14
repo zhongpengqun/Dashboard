@@ -13,7 +13,10 @@ window.title('Grid')
 window.geometry('400x600')
 
 # widgets 
-label1 = ttk.Label(window, text = 'Label 1', background = 'red')
+photo_image = tk.PhotoImage(file='xx.png')
+label1 = ttk.Label(window, image=photo_image)
+label1.grid(column=1, row=1, padx=5, pady=5)
+# label1 = ttk.Label(window, text = 'Label 1', background = 'red')
 label2 = ttk.Label(window, text = 'Label 2', background = 'blue')
 label3 = ttk.Label(window, text = 'Label 3', background = 'green')
 label4 = ttk.Label(window, text = 'Label 4', background = 'yellow')
@@ -42,10 +45,11 @@ button2.grid(row = 2, column = 2, sticky = 'nesw')
 entry.grid(row = 2, column = 3, rowspan = 2, sticky = 'ew')
 
 
+
 def listen():
     print(time.time())
     clipboard_content = read_from_clipboard()
-    
+
 
 
     window.after(100, listen)
