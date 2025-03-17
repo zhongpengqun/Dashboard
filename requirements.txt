@@ -1,0 +1,2 @@
+ttkbootstrap==1.10.1
+PyOpenGL==3.1.9
